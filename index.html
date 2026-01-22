@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quỹ hàng | Mr Nguyên</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="brand">
+      <div class="name">Mr Nguyên</div>
+      <div class="tagline">Hàng Thật Giá Thật</div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <h1>Quỹ dự án đang có hàng</h1>
+  <p class="sub">Click vào từng dự án để xem sản phẩm chi tiết</p>
+  <div id="projects" class="grid"></div>
+</div>
+<script>
+fetch('data/projects.json')
+  .then(r => r.json())
+  .then(projects => {
+    document.getElementById('projects').innerHTML =
+      projects.map(p => `
+        <a href="project.html?id=${p.id}" class="card">
+          <img src="${p.cover}">
+          <div class="card-body">
+            <h3>${p.name}</h3>
+            <p>${p.location}</p>
+          </div>
+        </a>
+      `).join('');
+  });
+</script>
+</body>
+</html>

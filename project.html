@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Dự án | Mr Nguyên</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="brand">
+      <div class="name">Mr Nguyên</div>
+      <div class="tagline">Hàng Thật Giá Thật</div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <h1 id="title"></h1>
+  <div id="list" class="grid"></div>
+</div>
+<script>
+const id = new URLSearchParams(window.location.search).get('id');
+Promise.all([
+  fetch('data/projects.json').then(r => r.json()),
+  fetch('data/products.json').then(r => r.json())
+]).then(([projects, products]) => {
+  const project = projects.find(p => p.id === id);
+  document.getElementById('title').innerText = project.name;
+  const items = products.filter(p => p.projectId === id);
+  document.getElementById('list').innerHTML =
+    items.map(p => `
+      <div class="card">
+        <img src="${p.image}">
+        <div class="card-body">
+          <h3>${p.title}</h3>
+          <p>${p.area} · ${p.price}</p>
+          <p>${p.note}</p>
+          <div class="actions">
+            <a class="btn" href="${p.zalo}" target="_blank">💬 Zalo</a>
+            <a class="btn outline" href="${p.phone}">📞 Gọi</a>
+          </div>
+        </div>
+      </div>
+    `).join('');
+});
+</script>
+</body>
+</html>
