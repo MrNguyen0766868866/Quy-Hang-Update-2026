@@ -1,0 +1,14 @@
+[
+  {
+    "id": "sun-ponte",
+    "name": "Sun Ponte Residence",
+    "location": "Đà Nẵng",
+    "cover": "assets/projects/sun-ponte/cover.jpg"
+  },
+  {
+    "id": "charmora",
+    "name": "Sun Charmora City",
+    "location": "Nha Trang",
+    "cover": "assets/projects/charmora/cover.jpg"
+  }
+]
