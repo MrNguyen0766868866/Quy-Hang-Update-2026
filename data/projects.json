@@ -6,6 +6,12 @@
     "cover": "assets/projects/sun-ponte/cover.jpg"
   },
   {
+    "id": "dat-nen-hoa-xuan",
+    "name": "Đất Nền Hoà Xuân",
+    "location": "Đà Nẵng",
+    "cover": "assets/projects/dat-nen-hoa-xuan/cover.jpg"
+  },
+  {
     "id": "charmora",
     "name": "Sun Charmora City",
     "location": "Nha Trang",
