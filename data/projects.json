@@ -12,9 +12,27 @@
     "cover": "assets/projects/dat-nen-hoa-xuan/cover.jpg"
   },
   {
-    "id": "charmora",
-    "name": "Sun Charmora City",
-    "location": "Nha Trang",
-    "cover": "assets/projects/charmora/cover.jpg"
+    "id": "sun-symphony",
+    "name": "Sun Symphony Residence",
+    "location": "Đà Nẵng",
+    "cover": "assets/projects/sun-symphony/cover.jpg"
+  },
+  {
+    "id": "sun-spana-tower",
+    "name": "Sun Spana Tower",
+    "location": "Đà Nẵng",
+    "cover": "assets/projects/sun-spana-tower/cover.jpg"
+  },
+  {
+    "id": "sun-cora-tower",
+    "name": "Sun Cora Tower",
+    "location": "Đà Nẵng",
+    "cover": "assets/projects/sun-cora-tower/cover.jpg"
+  },
+  {
+    "id": "sun-costa-tower",
+    "name": "Sun Costa Tower",
+    "location": "Đà Nẵng",
+    "cover": "assets/projects/sun-costa-tower/cover.jpg"
   }
 ]
